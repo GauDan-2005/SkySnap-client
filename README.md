@@ -1,8 +1,30 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple weather app built using React that provides current and daily weather information. It utilizes the OpenWeatherMap API for fetching weather data based on geolocation.
 
-## Available Scripts
+## Features
+
+- Display current weather information based on user's geolocation.
+- Show daily weather forecast for the next 7 days.
+- Save and view weather information for custom locations.
+- Responsive design for various screen sizes.
+
+## Getting Started
+
+These instructions will help you set up and run the project on your local machine.
+
+### Prerequisites
+
+- Node.js and npm installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/SkySnap-client.git
+
+
 
 In the project directory, you can run:
 
