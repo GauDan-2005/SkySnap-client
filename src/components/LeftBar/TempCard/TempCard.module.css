@@ -1,0 +1,120 @@
+.temp_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  align-self: stretch;
+
+  border-radius: 0.5rem;
+}
+
+.deg_container {
+  display: flex;
+  padding: 0.25rem 0.4rem;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 0.5rem;
+  background: rgba(196, 153, 243, 0.3);
+}
+
+.deg {
+  color: #fff;
+  font-family: Josefin Slab;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.property_container {
+  display: flex;
+  padding: 0.8rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  align-self: stretch;
+
+  border-radius: 0.5rem;
+  background: rgba(196, 153, 243, 0.3);
+}
+
+.ind_prop_cont {
+  display: flex;
+  padding: 0.4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+
+  background: rgba(51, 24, 107, 0.3);
+  border-radius: 0.25rem;
+}
+
+.prop_name {
+  flex: 1 0 0;
+
+  color: #fff;
+  font-family: Josefin Slab;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.prop_value {
+  color: #fff;
+  font-family: Josefin Slab;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media only screen and (max-width: 768px) {
+  .temp_card {
+    gap: 1.2rem;
+  }
+
+  .deg_container {
+    padding: 0.8rem 0.4rem;
+    align-self: stretch;
+  }
+
+  .deg {
+    font-size: 3.6rem;
+  }
+
+  .property_container {
+    flex-direction: row;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .ind_prop_cont {
+    display: flex;
+    padding: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    align-self: auto;
+
+    background: rgba(51, 24, 107, 0.3);
+    border-radius: 0.25rem;
+    flex: 0 0 auto;
+  }
+
+  .prop_name {
+    font-size: 1.2rem;
+    /* flex: 0 0 0; */
+  }
+
+  .prop_value {
+    font-size: 1.2rem;
+  }
+}

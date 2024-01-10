@@ -1,0 +1,97 @@
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.top_bar {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  /* width: 89rem; */
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+}
+
+.main {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+  /* flex: 1 0 0; */
+}
+
+.v_line {
+  align-self: stretch;
+  border: 0.0625rem solid #fff; /* Specify the color and style of the line */
+  /* margin: 0 10px; */
+  border-radius: 0.5rem;
+}
+
+.h_line {
+  align-self: stretch;
+  border: 0.0625rem solid #fff;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.h_line_inside {
+  display: none;
+  align-self: stretch;
+  border: 0.0625rem solid #fff;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between;
+
+    position: relative;
+  }
+
+  .top_bar {
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 0;
+    gap: 1.2rem;
+  }
+
+  .main {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .v_line {
+    border: 0.125rem solid #fff;
+    background: #fff;
+  }
+
+  .h_line {
+    border: 0.125rem solid #fff;
+    background: #fff;
+  }
+
+  .h_line_inside {
+    display: inherit;
+    align-self: stretch;
+    border: 0.125rem solid #fff;
+    border-radius: 0.5rem;
+  }
+}

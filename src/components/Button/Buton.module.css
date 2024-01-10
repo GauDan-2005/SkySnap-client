@@ -1,0 +1,25 @@
+.btn {
+  display: flex;
+  padding: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+
+  border-radius: 0.5rem;
+  background: var(--purple-light, #c499f3);
+
+  cursor: default;
+}
+
+.btn_text {
+  color: #fff;
+  text-align: center;
+  font-family: Josefin Slab;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+
+  flex: 1 0 0;
+}

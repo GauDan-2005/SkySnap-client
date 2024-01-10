@@ -1,0 +1,21 @@
+.outer_box {
+  display: flex;
+  padding: 0.8rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  /* max-width: 25%; */
+  /* max-height: 60vh; */
+  gap: 1rem;
+
+  border-radius: 0.5rem;
+  background: rgba(115, 96, 223, 0.7);
+}
+
+@media only screen and (max-width: 768px) {
+  .outer_box {
+    justify-content: flex-start;
+    gap: 1.2rem;
+  }
+}

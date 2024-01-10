@@ -1,0 +1,55 @@
+.week_box {
+  display: flex;
+  /* width: 100%; */
+  padding: 0.8rem 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  gap: 0.6rem;
+
+  border-radius: 0.5rem;
+  background: rgba(115, 96, 223, 0.7);
+
+  flex: 1 0 0;
+  max-height: 40%;
+  /* min-height: 35%; */
+}
+
+.week_title {
+  color: #fff;
+  text-align: center;
+  font-family: Josefin Slab;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+
+  align-self: stretch;
+}
+
+.day_card_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  align-self: stretch;
+}
+
+@media only screen and (max-width: 768px) {
+  .week_title {
+    font-size: 1.2rem;
+  }
+
+  .day_card_container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    align-self: auto;
+    overflow-x: auto;
+  }
+}

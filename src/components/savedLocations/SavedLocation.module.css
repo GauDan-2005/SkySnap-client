@@ -1,0 +1,52 @@
+.saved_location {
+  display: flex;
+  /* width: 13.25rem; */
+  padding: 0.8rem 1.2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  background: rgba(115, 96, 223, 0.5);
+}
+
+.heading {
+  color: #fff;
+  text-align: center;
+  font-family: Josefin Slab;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+
+  align-self: stretch;
+}
+
+.cards_container {
+  display: flex;
+  /* height: 37.5625rem; */
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  align-self: stretch;
+}
+
+@media only screen and (max-width: 768px) {
+  .saved_location {
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-self: stretch;
+  }
+
+  .heading {
+    font-size: 1.2rem;
+  }
+
+  .cards_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-x: auto;
+  }
+}
