@@ -94,24 +94,24 @@
 
   .location_img {
     width: auto;
-    height: 2.4rem;
+    height: 3.2rem;
   }
 
   .location_text {
     font-size: 3.6rem;
     text-align: center;
-    flex: 0;
+    flex: none;
   }
 
   .desc_img {
     width: auto;
-    height: 2.4rem;
+    height: 4rem;
   }
 
   .desc_text {
     font-size: 3.6rem;
     text-align: center;
-    flex: 0;
+    flex: none;
   }
 
   .card_box {

@@ -14,7 +14,6 @@ const CenterCard = () => {
   const {
     weather,
     wind_cdir_full,
-    wind_cdir,
     wind_spd,
     vis: visibility,
     pres: pressure,
@@ -76,7 +75,7 @@ const CenterCard = () => {
           />
           <PropCard
             title="Visibility"
-            value={visibility}
+            value={visibility?.toFixed(1)}
             img={img.visibility}
             metrics="km"
           />

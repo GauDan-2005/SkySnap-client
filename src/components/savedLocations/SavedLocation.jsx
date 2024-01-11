@@ -6,6 +6,7 @@ import styles from "./SavedLocation.module.css";
 
 const SavedLocation = () => {
   const { savedLocationList } = useContext(WeatherContext);
+  console.log(savedLocationList);
 
   return (
     <div className={styles.saved_location}>
@@ -24,9 +25,6 @@ const SavedLocation = () => {
           );
         })}
         {savedLocationList.length < 4 && <SaveCard add={true} />}
-        <SaveCard location="delhi" value={12} />
-        <SaveCard location="delhi" value={12} />
-        <SaveCard location="delhi" value={12} />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const WeatherContext = React.createContext([]);
@@ -49,32 +49,6 @@ export const WeatherContextProvider = (props) => {
     );
   };
 
-  // const fetchCurrWeatherData = useCallback(async () => {
-  //   if (!apiKey || !currentWeatherUrl) {
-  //     setError("API key or URL is not defined.");
-  //     return;
-  //   }
-  //   try {
-  //     const response = await axios.get(currentWeatherUrl, {
-  //       params: {
-  //         lat: currLocation.latitude,
-  //         lon: currLocation.longitude,
-  //         key: apiKey,
-  //       },
-  //     });
-  //     setCurrWeatherData(response.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //     setError(error.message);
-  //     setErrorActive(true);
-  //   }
-  // }, [
-  //   apiKey,
-  //   currentWeatherUrl,
-  //   currLocation.latitude,
-  //   currLocation.longitude,
-  // ]);
-
   const addSavedLocation = async (cityName) => {
     if (!apiKey || !currentWeatherUrl) {
       setError("API key or URL is not defined.");
@@ -97,8 +71,11 @@ export const WeatherContextProvider = (props) => {
   };
 
   const deleteSavedLocation = (cityName) => {
-    setDailyWeatherData((prev) => {
-      prev?.filter((w_data) => w_data?.data[0]?.city_name !== cityName);
+    setSavedLocationList((prev) => {
+      console.log(prev);
+      return prev
+        ? prev.filter((w_data) => w_data?.data[0]?.city_name !== cityName)
+        : prev;
     });
   };
 
@@ -149,7 +126,6 @@ export const WeatherContextProvider = (props) => {
   // TO GET CITY NAME
   useEffect(() => {
     const getCityName = () => {
-      // const weatherData = dailyWeatherData?
       try {
         setCurrLocation((prev) => ({
           ...prev,
@@ -164,35 +140,6 @@ export const WeatherContextProvider = (props) => {
     };
     getCityName();
   }, [dailyWeatherData]);
-
-  // TRYING NEW API
-  // useEffect(() => {
-  //   const fetchDataDiff = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         "http://api.weatherapi.com/v1/current.json",
-  //         {
-  //           params: {
-  //             q: `${currLocation.latitude},${currLocation.longitude}`,
-  //             days: 7,
-  //             key: "6da447ef8f8c462c99031953241001",
-  //           },
-  //         }
-  //       );
-  //       console.log(response.data);
-  //       // setDailyWeatherData(response.data);
-  //     } catch (error) {
-  //       setError(error.message);
-  //       setErrorActive(true);
-  //     }
-  //   };
-  //   fetchDataDiff();
-  // }, [apiKey, currLocation.latitude, currLocation.longitude]);
-
-  // // console logging
-  // console.log(currLocation);
-  // console.log(dailyWeatherData);
-  // console.log(error);
 
   return (
     <WeatherContext.Provider

@@ -6,15 +6,14 @@ import styles from "./WeekBar.module.css";
 
 const WeekBar = () => {
   const { dailyWeatherData } = useContext(WeatherContext);
-
-  const newDailyWeatherData = dailyWeatherData?.slice(1) || [];
+  const newDailyWeatherData = dailyWeatherData?.data?.slice(1) || [];
 
   return (
     <div className={styles.week_box}>
-      <p className={styles.week_title}>next 7 days</p>
+      <p className={styles.week_title}>next 6 days</p>
       <div className={styles.day_card_container}>
         {newDailyWeatherData &&
-          newDailyWeatherData?.data?.map((weatherData) => (
+          newDailyWeatherData?.map((weatherData) => (
             <WeekDayCard
               key={weatherData.valid_date}
               temp={weatherData.temp}
@@ -24,12 +23,6 @@ const WeekBar = () => {
               lowTemp={weatherData.min_temp}
             />
           ))}
-        <WeekDayCard temp={12} date={"2024-01-10"} highTemp={12} lowTemp={12} />
-        <WeekDayCard temp={12} date={"2024-01-10"} highTemp={12} lowTemp={12} />
-        <WeekDayCard temp={12} date={"2024-01-10"} highTemp={12} lowTemp={12} />
-        <WeekDayCard temp={12} date={"2024-01-10"} highTemp={12} lowTemp={12} />
-        <WeekDayCard temp={12} date={"2024-01-10"} highTemp={12} lowTemp={12} />
-        <WeekDayCard temp={12} date={"2024-01-10"} highTemp={12} lowTemp={12} />
       </div>
     </div>
   );
