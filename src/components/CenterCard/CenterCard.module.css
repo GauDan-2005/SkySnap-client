@@ -94,22 +94,22 @@
 
   .location_img {
     width: auto;
-    height: 3.2rem;
+    height: 2.8rem;
   }
 
   .location_text {
-    font-size: 3.6rem;
+    font-size: 2.4rem;
     text-align: center;
     flex: none;
   }
 
   .desc_img {
     width: auto;
-    height: 4rem;
+    height: 3.6rem;
   }
 
   .desc_text {
-    font-size: 3.6rem;
+    font-size: 2.4rem;
     text-align: center;
     flex: none;
   }

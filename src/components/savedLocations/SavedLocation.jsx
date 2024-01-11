@@ -6,7 +6,6 @@ import styles from "./SavedLocation.module.css";
 
 const SavedLocation = () => {
   const { savedLocationList } = useContext(WeatherContext);
-  console.log(savedLocationList);
 
   return (
     <div className={styles.saved_location}>
